@@ -1,0 +1,157 @@
+.colors {
+  &__form {
+    width: 640px;
+    padding-top: 16px;
+    background-color: $c-white;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+    padding: 0 24px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+
+  &__reset-button {
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 61px;
+    min-height: 21px;
+    padding: 0;
+    padding-left: 23px;
+    font-size: 16px;
+    line-height: 21px;
+    color: $c-gray;
+    background-color: transparent;
+    border: none;
+
+    outline: 1px solid black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background-image: url("../assets/images/svg/reset-icon.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  &__table-row {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    &:first-child {
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__table-header,
+  &__table-cell {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    padding: 5px 17px 5px 5px;
+
+    &:nth-child(1) {
+      justify-content: flex-start;
+      flex-grow: unset;
+      min-width: 69px;
+    }
+
+    &:nth-child(2) {
+      min-width: 186px;
+    }
+
+    &:nth-child(3) {
+      min-width: 78px;
+      padding: 5px 16px 5px 8px;
+    }
+
+    &:nth-child(4) {
+      min-width: 129px;
+    }
+
+    &:nth-child(5) {
+      min-width: 176px;
+    }
+
+    &--id {
+      max-width: 70px;
+    }
+
+    &--year {
+      justify-content: flex-start;
+    }
+  }
+
+  &__table-header {
+    min-height: 32px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+
+    &:last-child {
+      border-right: none;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+  }
+
+  &__table-cell {
+    min-height: 50px;
+
+    &:nth-child(3) {
+      min-width: 78px;
+      padding: 5px 18px 5px 8px;
+    }
+
+    &:nth-child(5) {
+      min-width: 176px;
+      padding: 5px 17px 5px 7px;
+    }
+
+    &--name {
+      text-transform: capitalize;
+    }
+
+    &--value {
+      div {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        border-radius: 2px;
+        background-color: red;
+      }
+    }
+  }
+}
