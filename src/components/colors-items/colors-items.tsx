@@ -37,7 +37,9 @@ const ColorsItem: React.FC<ColorsItemProps> = ({elem, setColorItemsClasses}: Col
   return (
     <tr className="colors__table-row">
       <td className={colorItemClass[ColorControlValue.COLOR_ID]}>{id}</td>
-      <td className={colorItemClass[ColorControlValue.COLOR_NAME]}>{name}</td>
+      <td className={colorItemClass[ColorControlValue.COLOR_NAME]}>
+        <span>{name}</span>
+      </td>
       <td className={colorItemClass[ColorControlValue.COLOR_YEAR]}>{year}</td>
       <td className={colorItemClass[ColorControlValue.COLOR_VALUE]}>
         <span>{color}</span>
