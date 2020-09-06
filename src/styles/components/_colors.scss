@@ -26,16 +26,13 @@
     justify-content: flex-end;
     align-items: center;
     width: 61px;
-    min-height: 21px;
+    min-height: 24px;
     padding: 0;
     padding-left: 23px;
     font-size: 16px;
-    line-height: 21px;
-    color: $c-gray;
+    line-height: 18px;
     background-color: transparent;
     border: none;
-
-    outline: 1px solid black;
 
     &::before {
       content: "";
@@ -44,7 +41,6 @@
       left: 0;
       width: 18px;
       height: 18px;
-      background-image: url("../assets/images/svg/reset-icon.svg");
       background-position: 0 0;
       background-repeat: no-repeat;
       transform: translateY(-50%);
@@ -74,7 +70,7 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
-    flex-grow: 1;
+    width: 100%;
     padding: 5px 17px 5px 5px;
 
     &:nth-child(1) {
@@ -122,6 +118,10 @@
       border-right: none;
     }
 
+    label {
+      cursor: pointer;
+    }
+
     input[type="checkbox"] {
       margin-right: 5px;
     }
@@ -154,4 +154,27 @@
       }
     }
   }
+}
+
+// special classes
+.active-reset-button {
+  color: $c-azure-radiance;
+  cursor: pointer;
+
+  &::before {
+    background-image: url("../assets/images/svg/active-reset-icon.svg");
+  }
+}
+
+.disabled-reset-button {
+  color: $c-gray;
+  cursor: auto;
+
+  &::before {
+    background-image: url("../assets/images/svg/disabled-reset-icon.svg");
+  }
+}
+
+.hidden {
+  display: none;
 }

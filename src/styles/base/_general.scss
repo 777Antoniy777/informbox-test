@@ -12,18 +12,21 @@ html {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: $media-mb;
+  height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
   line-height: 21px;
   font-family: $segoe;
   color: $c-black;
+  background-color: $c-mystic;
   overflow-x: hidden;
-
-  background-color: lightblue;
 
   @media (max-width: $media-tb) {
     font-size: 12px;
@@ -32,14 +35,9 @@ body {
 }
 
 .site-wrapper {
-  // @include set-width($w-site-wrapper-dt, $w-layout-dt);
   max-width: $w-site-wrapper-dt;
   margin-right: auto;
   margin-left: auto;
-
-  @media (max-width: $media-tb) {
-    @include set-width($w-site-wrapper-mb, $w-layout-mb);
-  }
 }
 
 a {

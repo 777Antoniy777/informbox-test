@@ -72,7 +72,7 @@ const createJSLoader = () => {
     'babel-loader',
   ];
 
-  if (isDev) loaders.push('eslint-loader');
+  // if (isDev) loaders.push('eslint-loader');
 
   return loaders;
 };
@@ -100,7 +100,7 @@ module.exports = {
   mode: 'development',
   context: path.resolve(__dirname, 'src'),
   entry: {
-    'bundle': ["@babel/polyfill", './index.jsx'],
+    'bundle': ["@babel/polyfill", './index.tsx'],
   },
   output: {
     filename: (pathData) => {

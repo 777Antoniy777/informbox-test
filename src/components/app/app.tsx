@@ -1,9 +1,9 @@
 import * as React from "react";
-import ColorsItems from "../colors-items/colors-items";
+import Main from "../main/main";
 
 const App = () => {
   return (
-    <ColorsItems />
+    <Main />
   );
 };
 

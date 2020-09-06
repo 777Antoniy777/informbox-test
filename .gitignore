@@ -11,6 +11,3 @@ Thumbs.db
 *.log*
 node_modules/
 package-lock.json
-
-# Файлы сборки
-dist/
